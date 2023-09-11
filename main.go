@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"math/rand"
 	"net/http"
 	"time"
@@ -39,7 +40,7 @@ func joinChannel(w http.ResponseWriter, r *http.Request) {
 func handleRequests() {
 	http.HandleFunc("/", homePage)
 	http.HandleFunc("/rtc/join_channel", joinChannel)
-	http.ListenAndServe(":80", nil)
+	fmt.Println(http.ListenAndServe(":39393", nil))
 }
 
 // 主程序
