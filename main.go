@@ -39,7 +39,7 @@ func joinChannel(w http.ResponseWriter, r *http.Request) {
 func handleRequests() {
 	http.HandleFunc("/", homePage)
 	http.HandleFunc("/rtc/join_channel", joinChannel)
-	http.ListenAndServe(":39527", nil)
+	http.ListenAndServe(":80", nil)
 }
 
 // 主程序
